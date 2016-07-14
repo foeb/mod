@@ -6,7 +6,7 @@
 
 sr     = 44100
 ksmps  = 16
-nchnls = 1
+nchnls = 2
 0dbfs  = 1
 
 opcode bpbank, a, akkk
@@ -28,12 +28,14 @@ opcode bpbank, a, akkk
 endop
 
 instr 1
-  asig  inch 1
+  ainl  inch 1
+  ainr  inch 2
   kfreq invalue "freq"
   kbw   invalue "bw"
   ksep  invalue "sep"
-  aout  bpbank asig, kfreq, kbw, ksep
-        outs aout
+  aoutl bpbank ainl, kfreq, kbw, ksep
+  aoutr bpbank ainr, kfreq, kbw, ksep
+        outs aoutl, aoutr
 endin
 
 </CsInstruments>
