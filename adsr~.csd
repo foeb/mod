@@ -25,7 +25,6 @@ instr 1
   kdur  init 0          ; how long the note has been held so far
   kprev init 0          ; last nonzero gate level
   idead init 0.05       ; the "deadzone" -- gate levels below this are considered zero
-  imax  init 2^30-1     ; the maximum value of kdur
 
   kgate downsamp agate
   if kgate < idead goto discharge
@@ -58,7 +57,6 @@ discharge:
 
 output:
         ;printks "    %2.5f%n", 0.1, klev
-  kdur  min kdur, imax
   aprev upsamp kprev
         out aprev * klev
 endin
