@@ -1,0 +1,44 @@
+#N canvas 360 397 681 560 10;
+#X obj 322 169 loadbang;
+#X msg 320 60 control amp \$1;
+#X msg 322 115 control freq \$1;
+#X msg 322 194 set amp freq fine mode pw;
+#X msg 322 142 control fine \$1;
+#X msg 321 87 control pw \$1;
+#X obj 62 62 cnv 15 116 116 empty empty VCO~ 8 12 0 10 -204786 -13330
+0;
+#X obj 71 141 hsl 100 15 0.001 0.999 0 0 empty empty pulse_width -2
+-8 0 8 -13330 -262144 -13330 0 1;
+#X obj 71 110 hsl 100 15 0 1 0 0 empty empty amp2 -2 -8 0 8 -13330
+-262144 -13330 0 1;
+#X obj 128 67 nbx 5 14 -255 127 0 0 empty empty note1 -27 8 0 8 -13330
+-262144 -13330 0 256;
+#X obj 128 88 nbx 5 14 -1e+37 1e+37 0 0 empty empty fine -22 8 0 8
+-13330 -262144 -13330 0 256;
+#X obj 142 279 outlet~;
+#X obj 263 279 outlet~;
+#X obj 203 279 outlet~;
+#X obj 224 15 inlet;
+#X obj 128 16 inlet;
+#X obj 176 15 inlet;
+#X text 67 159 sin;
+#X text 109 159 saw;
+#X text 148 158 squ;
+#X obj 174 249 csound6~ vco~.csd;
+#X connect 0 0 3 0;
+#X connect 1 0 20 0;
+#X connect 2 0 20 0;
+#X connect 3 0 20 0;
+#X connect 4 0 20 0;
+#X connect 5 0 20 0;
+#X connect 7 0 5 0;
+#X connect 8 0 1 0;
+#X connect 9 0 2 0;
+#X connect 10 0 4 0;
+#X connect 14 0 20 0;
+#X connect 15 0 9 0;
+#X connect 16 0 8 0;
+#X connect 20 0 11 0;
+#X connect 20 1 13 0;
+#X connect 20 2 12 0;
+#X coords 0 -1 1 1 120 120 1 60 60;

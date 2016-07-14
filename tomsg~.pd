@@ -1,0 +1,27 @@
+#N canvas 504 435 450 300 10;
+#X obj 92 177 snapshot~;
+#X obj 92 198 outlet;
+#X obj 92 49 inlet~;
+#X obj 162 48 inlet;
+#X obj 102 102 cnv 15 116 16 empty empty tomsg~ 3 7 0 10 -204786 -13330
+0;
+#X obj 144 104 tgl 12 0 empty empty empty 17 7 0 10 -13330 -262144
+-13330 0 1;
+#X obj 20 178 snapshot~;
+#X obj 20 199 outlet;
+#X obj 20 49 inlet~;
+#X obj 162 104 nbx 5 12 1 10000 1 0 empty empty empty 0 -8 0 10 -13330
+-262144 -13330 1 256;
+#X obj 162 128 / 1000;
+#X obj 165 177 metro;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 1;
+#X connect 11 0 0 0;
+#X connect 11 0 6 0;
+#X coords 0 -1 1 1 120 20 1 100 100;

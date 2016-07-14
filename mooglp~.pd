@@ -1,0 +1,55 @@
+#N canvas 719 328 488 496 10;
+#X obj 102 102 cnv 15 116 126 empty empty MoogLP~ 8 12 0 10 -204786
+-13330 0;
+#X obj 111 206 hsl 100 15 0 255 0 0 empty empty saturation -2 -8 0
+8 -13330 -262144 -13330 3727 1;
+#X obj 111 138 hsl 100 15 1 256 1 0 empty empty cutoff -2 -8 0 8 -13330
+-262144 -13330 7154 1;
+#X obj 111 171 hsl 100 15 0 255 0 0 empty empty resonance -2 -8 0 8
+-13330 -262144 -13330 0 1;
+#X obj 111 49 inlet~;
+#X obj 173 49 inlet~;
+#X obj 14 13 loadbang;
+#X msg 14 35 55;
+#X obj 281 48 inlet;
+#X obj 231 48 inlet;
+#X obj 14 60 loadbang;
+#X text 34 204 sat * 32:;
+#X msg 14 82 96;
+#X msg 107 257 saturation \$1;
+#X obj 298 153 pack 0 50;
+#X obj 298 175 line~;
+#X obj 298 222 line~;
+#X obj 72 314 bob~;
+#X obj 149 313 bob~;
+#X obj 72 336 outlet~;
+#X obj 149 335 outlet~;
+#X obj 107 236 / 32;
+#X obj 298 200 / 64;
+#X text 34 170 res * 64:;
+#X text 34 139 fco / 20:;
+#X obj 298 132 * 20;
+#X connect 1 0 21 0;
+#X connect 2 0 25 0;
+#X connect 3 0 22 0;
+#X connect 4 0 17 0;
+#X connect 5 0 18 0;
+#X connect 6 0 7 0;
+#X connect 7 0 2 0;
+#X connect 8 0 3 0;
+#X connect 9 0 2 0;
+#X connect 10 0 12 0;
+#X connect 12 0 1 0;
+#X connect 13 0 17 0;
+#X connect 13 0 18 0;
+#X connect 14 0 15 0;
+#X connect 15 0 17 1;
+#X connect 15 0 18 1;
+#X connect 16 0 17 2;
+#X connect 16 0 18 2;
+#X connect 17 0 19 0;
+#X connect 18 0 20 0;
+#X connect 21 0 13 0;
+#X connect 22 0 16 0;
+#X connect 25 0 14 0;
+#X coords 0 -1 1 1 120 130 1 100 100;
