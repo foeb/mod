@@ -1,0 +1,24 @@
+#N canvas 1074 445 521 454 10;
+#X obj 102 102 cnv 15 116 56 empty empty SAT~ 8 12 0 10 -204786 -13330
+0;
+#X obj 110 137 hsl 100 15 0 1 0 0 empty empty distortion -2 -8 0 8
+-13330 -262144 -13330 2000 1;
+#X obj 247 36 inlet~;
+#X obj 299 36 inlet~;
+#X obj 350 36 inlet;
+#X msg 107 169 control dist \$1;
+#X obj 37 169 loadbang;
+#X msg 37 191 set dist;
+#X obj 306 347 outlet~;
+#X obj 248 347 outlet~;
+#X obj 247 290 csound6~ sat~.csd;
+#X connect 1 0 5 0;
+#X connect 2 0 10 0;
+#X connect 3 0 10 1;
+#X connect 4 0 1 0;
+#X connect 5 0 10 0;
+#X connect 6 0 7 0;
+#X connect 7 0 10 0;
+#X connect 10 0 9 0;
+#X connect 10 1 8 0;
+#X coords 0 -1 1 1 120 60 1 100 100;

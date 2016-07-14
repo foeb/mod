@@ -1,0 +1,46 @@
+#N canvas 924 231 565 496 10;
+#X obj 102 102 cnv 15 116 126 empty empty LPF~ 8 12 0 10 -204786 -13330
+0;
+#X obj 111 206 hsl 100 15 0 3.14 0 0 empty empty distortion -2 -8 0
+8 -13330 -262144 -13330 2970 1;
+#X obj 111 138 hsl 100 15 40 8000 1 0 empty empty cutoff -2 -8 0 8
+-13330 -262144 -13330 4481 1;
+#X obj 111 171 hsl 100 15 0 1 0 0 empty empty resonance -2 -8 0 8 -13330
+-262144 -13330 0 1;
+#X obj 246 50 inlet~;
+#X obj 308 50 inlet~;
+#X obj 19 99 loadbang;
+#X obj 465 49 inlet;
+#X obj 366 49 inlet;
+#X obj 19 167 loadbang;
+#X obj 246 331 outlet~;
+#X obj 310 330 outlet~;
+#X msg 19 121 440;
+#X obj 247 301 csound6~ lpf~.csd;
+#X obj 108 245 loadbang;
+#X msg 108 267 set fco res dist;
+#X msg 359 127 control fco \$1;
+#X msg 359 150 control res \$1;
+#X msg 359 173 control dist \$1;
+#X obj 416 49 inlet;
+#X msg 19 189 0.4;
+#X connect 1 0 18 0;
+#X connect 2 0 16 0;
+#X connect 3 0 17 0;
+#X connect 4 0 13 0;
+#X connect 5 0 13 1;
+#X connect 6 0 12 0;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;
+#X connect 9 0 20 0;
+#X connect 12 0 2 0;
+#X connect 13 0 10 0;
+#X connect 13 1 11 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 16 0 13 0;
+#X connect 17 0 13 0;
+#X connect 18 0 13 0;
+#X connect 19 0 3 0;
+#X connect 20 0 1 0;
+#X coords 0 -1 1 1 120 130 1 100 100;

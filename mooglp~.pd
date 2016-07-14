@@ -1,12 +1,12 @@
-#N canvas 609 335 488 496 10;
+#N canvas 787 331 488 496 10;
 #X obj 102 102 cnv 15 116 126 empty empty MoogLP~ 8 12 0 10 -204786
 -13330 0;
 #X obj 111 206 hsl 100 15 0 10 0 0 empty empty saturation -2 -8 0 8
--13330 -262144 -13330 2970 1;
+-13330 -262144 -13330 4970 1;
 #X obj 111 138 hsl 100 15 40 8000 1 0 empty empty cutoff -2 -8 0 8
--13330 -262144 -13330 4481 1;
+-13330 -262144 -13330 3581 1;
 #X obj 111 171 hsl 100 15 0 5 0 0 empty empty resonance -2 -8 0 8 -13330
--262144 -13330 0 1;
+-262144 -13330 4300 1;
 #X obj 246 50 inlet~;
 #X obj 308 50 inlet~;
 #X obj 19 99 loadbang;
@@ -23,6 +23,7 @@
 #X obj 309 332 outlet~;
 #X msg 19 121 440;
 #X msg 19 189 3;
+#X text 23 42 This stopped working atm... I don't know why, f 28;
 #X connect 1 0 10 0;
 #X connect 2 0 11 0;
 #X connect 3 0 13 0;
