@@ -1,0 +1,43 @@
+#N canvas 237 300 535 506 10;
+#X obj 102 102 cnv 15 116 161 empty empty ADSR~ 8 12 0 10 -204786 -13330
+0;
+#X obj 110 239 hsl 100 15 1 50000 1 0 empty empty release -2 -8 0 8
+-13330 -262144 -13330 1700 1;
+#X obj 111 138 hsl 100 15 1 50000 1 0 empty empty attack -2 -8 0 8
+-13330 -262144 -13330 0 1;
+#X obj 111 171 hsl 100 15 1 50000 1 0 empty empty decay -2 -8 0 8 -13330
+-262144 -13330 500 1;
+#X obj 111 206 hsl 100 15 0 1 0 0 empty empty sustain -2 -8 0 8 -13330
+-262144 -13330 1200 1;
+#X obj 40 317 loadbang;
+#X msg 40 339 set atk dec slev rel;
+#X obj 230 43 inlet~;
+#X obj 284 43 inlet;
+#X obj 330 43 inlet;
+#X obj 375 43 inlet;
+#X obj 420 43 inlet;
+#X msg 395 116 control atk \$1;
+#X msg 395 138 control dec \$1;
+#X msg 395 160 control slev \$1;
+#X msg 395 182 control rel \$1;
+#X obj 229 410 outlet~;
+#X obj 229 388 csound6~ adsr~.csd;
+#X msg 286 355 reset;
+#X connect 1 0 15 0;
+#X connect 2 0 12 0;
+#X connect 3 0 13 0;
+#X connect 4 0 14 0;
+#X connect 5 0 6 0;
+#X connect 6 0 17 0;
+#X connect 7 0 17 0;
+#X connect 8 0 2 0;
+#X connect 9 0 3 0;
+#X connect 10 0 4 0;
+#X connect 11 0 1 0;
+#X connect 12 0 17 0;
+#X connect 13 0 17 0;
+#X connect 14 0 17 0;
+#X connect 15 0 17 0;
+#X connect 17 0 16 0;
+#X connect 18 0 17 0;
+#X coords 0 -1 1 1 120 165 1 100 100;

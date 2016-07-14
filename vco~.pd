@@ -1,4 +1,4 @@
-#N canvas 360 397 681 560 10;
+#N canvas 356 339 681 560 10;
 #X obj 322 169 loadbang;
 #X msg 320 60 control amp \$1;
 #X msg 322 115 control freq \$1;
@@ -8,11 +8,11 @@
 #X obj 62 62 cnv 15 116 116 empty empty VCO~ 8 12 0 10 -204786 -13330
 0;
 #X obj 71 141 hsl 100 15 0.001 0.999 0 0 empty empty pulse_width -2
--8 0 8 -13330 -262144 -13330 0 1;
-#X obj 71 110 hsl 100 15 0 1 0 0 empty empty amp2 -2 -8 0 8 -13330
--262144 -13330 0 1;
-#X obj 128 67 nbx 5 14 -255 127 0 0 empty empty note1 -27 8 0 8 -13330
--262144 -13330 0 256;
+-8 0 8 -13330 -262144 -13330 300 1;
+#X obj 71 110 hsl 100 15 0 1 0 0 empty empty amp -2 -8 0 8 -13330 -262144
+-13330 3400 1;
+#X obj 128 67 nbx 5 14 -255 127 0 0 empty empty note -22 8 0 8 -13330
+-262144 -13330 40 256;
 #X obj 128 88 nbx 5 14 -1e+37 1e+37 0 0 empty empty fine -22 8 0 8
 -13330 -262144 -13330 0 256;
 #X obj 142 279 outlet~;
@@ -35,7 +35,7 @@
 #X connect 8 0 1 0;
 #X connect 9 0 2 0;
 #X connect 10 0 4 0;
-#X connect 14 0 20 0;
+#X connect 14 0 7 0;
 #X connect 15 0 9 0;
 #X connect 16 0 8 0;
 #X connect 20 0 11 0;
